@@ -29,7 +29,7 @@
 		$loginUrl = $facebook->getLoginUrl(array(
 			'diplay'=>'popup',
 			'scope'=>'email',
-			'redirect_uri' => 'http://apps.facebook.com/sign_up_test_me'
+			'redirect_uri' => 'https://apps.facebook.com/sign_up_test_me'
 		));
 		echo '<button><a href="', $loginUrl, '" target="_top">login</a></button>';
 	endif; 
