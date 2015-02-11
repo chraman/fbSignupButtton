@@ -12,7 +12,7 @@
 	<title>Facebook SignUp</title>
 </head>
 <body>
-<?php
+<?
 	$user = $facebook->getUser();
 	if ($user): 
 		$user_graph = $facebook->api('/me');
@@ -24,10 +24,12 @@
 		echo '<p><a href="logout.php">logout</a></p>';
 	    echo '<p>Your email id is: ', $user_graph['email'],'</p>';
 	    echo '<p>Your gender is: ', $user_graph['gender'],'</p>';
+	    echo '<p><a href="logout.php">logout</a></p>';
+	    else: 
 		$loginUrl = $facebook->getLoginUrl(array(
 			'diplay'=>'popup',
 			'scope'=>'email',
-			'redirect_uri' => 'http://fbsignupbutton.herokuapp.com/'
+			'redirect_uri' => 'http://apps.facebook.com/sign_up_test_me'
 		));
 		echo '<button><a href="', $loginUrl, '" target="_top">login</a></button>';
 	endif; 
