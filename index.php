@@ -1,8 +1,8 @@
 <?php
 	require 'php-sdk/facebook.php';
 	$facebook = new Facebook(array(
-		'appId'  => '764344836948245',
-		'secret' => 'c226c68cd859fa01b892d36076bac6ca'
+		'appId'  => '1558311771076814',
+		'secret' => '92454ddfb405669c03ecd5a5c49547f7'
 	));
 ?>
 <!DOCTYPE html>
