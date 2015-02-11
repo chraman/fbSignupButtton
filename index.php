@@ -29,7 +29,7 @@
 		$loginUrl = $facebook->getLoginUrl(array(
 			'diplay'=>'popup',
 			'scope'=>'email',
-			'redirect_uri' => 'https://fbsignupbutton.herokuapp.com/'
+			'redirect_uri' => 'https://fbsignupbutton.herokuapp.com'
 		));
 		echo '<button><a href="', $loginUrl, '" target="_top">login</a></button>';
 	endif; 
