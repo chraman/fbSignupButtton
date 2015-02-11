@@ -17,11 +17,11 @@
 	if ($user): 
 		$user_graph = $facebook->api('/me');
 		$user_graph_page = $facebook->api('me?fields=accounts');
+		$user_graph_college = $facebook->api('me?fields=education');
 		echo '<h1>Hello ',$user_graph['first_name'],'</h1>';
 		echo '<p>Your birthday is: ',$user_graph['birthday'],'</p>';
 		echo '<p>Your User ID is: ', $user, '</p>';
-		echo '<p>Your College is: ', $user_graph['education'],'</p>';
-		echo '<p><a href="logout.php">logout</a></p>';
+		//echo '<p>Your College is: ', $user_graph_college['name'],'</p>';
 	    echo '<p>Your email id is: ', $user_graph['email'],'</p>';
 	    echo '<p>Your gender is: ', $user_graph['gender'],'</p>';
 	    echo '<p><a href="logout.php">logout</a></p>';
@@ -29,7 +29,7 @@
 		$loginUrl = $facebook->getLoginUrl(array(
 			'diplay'=>'popup',
 			'scope'=>'email',
-			'redirect_uri' => 'https://apps.facebook.com/sign_up_test_me'
+			'redirect_uri' => 'https://fbsignupbutton.herokuapp.com/'
 		));
 		echo '<button><a href="', $loginUrl, '" target="_top">login</a></button>';
 	endif; 
